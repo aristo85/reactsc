@@ -125,12 +125,12 @@ const Welcome = () => {
                 type="number"
                 handleChange={ctx.handleChange}
               />
-              {/* <Input
-                placeholder="Keyword (Gif)"
+              <Input
+                placeholder="Keyword"
                 name="keyword"
                 type="text"
                 handleChange={ctx.handleChange}
-              /> */}
+              />
               <Input
                 placeholder="Enter Message"
                 name="message"
