@@ -42,7 +42,6 @@ const Welcome = () => {
       const { addressTo, amount, keyword, message } = ctx.formData;
 
       e.preventDefault();
-      console.log(ctx.formData);
 
       if (!addressTo || !amount || !keyword || !message) return;
 
@@ -126,12 +125,12 @@ const Welcome = () => {
                 type="number"
                 handleChange={ctx.handleChange}
               />
-              <Input
+              {/* <Input
                 placeholder="Keyword (Gif)"
                 name="keyword"
                 type="text"
                 handleChange={ctx.handleChange}
-              />
+              /> */}
               <Input
                 placeholder="Enter Message"
                 name="message"

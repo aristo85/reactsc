@@ -81,8 +81,6 @@ const TransactionsCard = ({
 const Transactions = () => {
   const ctx = useContext(TransactionContext);
 
-  console.log('ctx', ctx)
-
   return (
     <div className="flex w-full justify-center items-center 2xl:px-20 gradient-bg-transactions">
       <div className="flex flex-col md:p-12 py-12 px-4">
