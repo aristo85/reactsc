@@ -22,7 +22,7 @@ const Webinar: FC<ComponentProps> = ({ handleWebinarClose, style }) => {
 
     return (
         <div style={{height: '50px', padding: "50px"}}>
-            {window.screen.width > 1000 ? (
+            {/* {window.screen.width > 1000 ? ( */}
                 <div className="whatIsWalletBtn">
                 <button
                     className="whatIsWalletBtn link-btn"
@@ -33,7 +33,7 @@ const Webinar: FC<ComponentProps> = ({ handleWebinarClose, style }) => {
                     What is a wallet?
                 </button>
             </div>
-            ) : null}
+            {/* ) : null} */}
         </div>
     )
 }
