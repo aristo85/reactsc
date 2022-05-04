@@ -90,12 +90,12 @@
         font-family: "Gibson";
         font-weight: 400 !important;
         font-size: 18px;
-        color: black;
-        &:hover {
+        // color: black;
+        // &:hover {
             background: linear-gradient(272.54deg, #3027EF 56.25%, #6197FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
+        // }
     }
 }
