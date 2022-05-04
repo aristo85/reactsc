@@ -24,14 +24,13 @@ const Webinar: FC<ComponentProps> = ({ handleWebinarClose, style }) => {
         <div style={{height: '50px', padding: "50px"}}>
             {/* {window.screen.width > 1000 ? ( */}
                 <div className="whatIsWalletBtn">
-                <button
+                <p
                     className="whatIsWalletBtn link-btn"
-                    type="button"
                     onClick={() => {
                     }}
                 >
                     What is a wallet?
-                </button>
+                </p>
             </div>
             {/* ) : null} */}
         </div>
