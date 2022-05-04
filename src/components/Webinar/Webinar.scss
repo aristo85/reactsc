@@ -90,13 +90,14 @@
 justify-content: center;
 
     .link-btn {
-        font-family: "Gibson";
+        font-family: "Gibson", sans-serif;
         font-weight: 400 !important;
+        background: linear-gradient(272.54deg, #ef2727 56.25%, #6197FF 100%);
+        webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         font-size: 18px;
-        background: -webkit-linear-gradient(45deg, #850BFF -100%, #6197FF 100%);
-webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
+        cursor: pointer;
 
 
 
