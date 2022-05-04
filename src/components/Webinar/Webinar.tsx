@@ -21,29 +21,20 @@ const Webinar: FC<ComponentProps> = ({ handleWebinarClose, style }) => {
     }
 
     return (
-        <>
+        <div style={{height: '50px', padding: "50px"}}>
             {window.screen.width > 1000 ? (
-                <div className={`webinar`} >
-                    <div className="close-icon" onClick={handleWebinarClose}>x</div>
-                    <div className="mainInfo">
-                        <img src={'null'} alt="Webinar" />
-                        <div className="webinarInfo">
-                            <h2>3 Steps to Acquire Your First Metaverse Land</h2>
-                            <p>With Peggy Everyday at 10 PM EST </p>
-                        </div>
-                    </div>
-                    <div className="action-buttons">
-                        <button
-                            onClick={() => window.open("https://www.youtube.com/watch?v=gQI8XsKxEfs", "_blank")}
-                            className="transparent-button"
-                        >
-                            Watch Video
-                        </button>
-                        <button onClick={bookMySeat}>Book My Seat</button>
-                    </div>
-                </div>
+                <div className="whatIsWalletBtn">
+                <button
+                    className="whatIsWalletBtn link-btn"
+                    type="button"
+                    onClick={() => {
+                    }}
+                >
+                    What is a wallet?
+                </button>
+            </div>
             ) : null}
-        </>
+        </div>
     )
 }
 
