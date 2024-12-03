@@ -1,41 +1,49 @@
+import React from 'react';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import MobileStepper from '@material-ui/core/MobileStepper';
+import Button from '@material-ui/core/Button';
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
-import React, { FC } from "react"
-import "./Webinar.scss"
-// import WebinarImg from "../../images/Webinar.png"
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 400,
+    flexGrow: 1,
+  },
+});
 
-const oneDayInSeconds = 86400;
-const startingDateTimeStamp = 1650608400; // 2022-04-22 00:00:00 GMT
+export default function DotsMobileStepper() {
+  const classes = useStyles();
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
 
-interface ComponentProps {
-    handleWebinarClose: any
-    style: any
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  return (
+    <MobileStepper
+      variant="dots"
+      steps={6}
+      position="static"
+      activeStep={activeStep}
+      className={classes.root}
+      nextButton={
+        <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+          Next
+          {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+        </Button>
+      }
+      backButton={
+        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+          Back
+        </Button>
+      }
+    />
+  );
 }
-
-const Webinar: FC<ComponentProps> = ({ handleWebinarClose, style }) => {
-
-    const bookMySeat = () => {
-        let currentTime = Date.now()/1000;
-        let timeDiff = currentTime - startingDateTimeStamp;
-        let diffInDays = timeDiff / oneDayInSeconds;
-        let refId = Math.floor(diffInDays + 4) ;
-        window.open(`https://superworld.eventcalendarapp.com/u/33679/162282?repeatId=${refId}`, "_blank");
-    }
-
-    return (
-        <div style={{height: '50px', padding: "50px"}}>
-            {/* {window.screen.width > 1000 ? ( */}
-                <div className="whatIsWalletBtn">
-                <p
-                    className="whatIsWalletBtn link-btn"
-                    onClick={() => {
-                    }}
-                >
-                    What is a wallet?
-                </p>
-            </div>
-            {/* ) : null} */}
-        </div>
-    )
-}
-
-export default Webinar
